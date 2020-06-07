@@ -53,8 +53,9 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 (setq doom-font (font-spec :family "Fira Code" :size 11))
-(setq doom-leader-alt-key "M-m"
-      doom-localleader-alt-key "M-m l")
+(global-set-key (kbd "M-m") nil)
+(setq doom-leader-alt-key "M-m")
+
 (setq default-frame-alist '((left . 0) (width . 141) (height . 80)))
 (setq c-basic-offset 2)
 (menu-bar-mode -1)
