@@ -65,4 +65,7 @@
       "C-x j" 'windmove-down
       "C-x k" 'windmove-up
       "C-x l" 'windmove-right)
-(map! "C-h C-h" 'ccls-reload)
+;(map! "" 'ccls-reload)
+
+(map! :map c-mode-map "C-c C-r" 'ccls-reload
+      :map cpp-mode-map "C-c C-r" 'ccls-reload)
