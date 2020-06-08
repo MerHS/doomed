@@ -47,4 +47,4 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
-(package! fira-code-mode)
+; (package! fira-code-mode)
