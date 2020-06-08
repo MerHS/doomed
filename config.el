@@ -70,3 +70,9 @@
 
 (map! :map c-mode-map "C-c C-r" 'ccls-reload
       :map cpp-mode-map "C-c C-r" 'ccls-reload)
+
+(require 'multiple-cursors)
+(map! "C-c m" 'mc/edit-lines
+      "C->" 'mc/mark-next-like-this
+      "C-<" 'mc/mark-previous-like-this
+      "C-c C-<" 'mc/mark-all-like-this)
