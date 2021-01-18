@@ -48,4 +48,4 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 ; (package! fira-code-mode)
-(package! multiple-cursors)
+(package! math-symbol-lists)

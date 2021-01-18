@@ -43,14 +43,14 @@
 ;; - `after!' for running code after a package has loaded
 ;; - `add-load-path!' for adding directories to the `load-path', relative to
 ;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
+;;   `require' or `use-pakckage'.
 ;; - `map!' for binding new keys
 ;;
 ;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c g k').
+;; the highlighted symbol at press 'K' (non-evil users must press 'M-m c k').
 ;; This will open documentation for it, including demos of how they are used.
 ;;
-;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
+;; You can also try 'gd' (or 'M-m c d') to jump to their definition and see how
 ;; they are implemented.
 (setq doom-font (font-spec :family "Fira Code" :size 11))
 (global-set-key (kbd "M-m") nil)
@@ -75,4 +75,23 @@
 (map! "C-c m" 'mc/edit-lines
       "C->" 'mc/mark-next-like-this
       "C-<" 'mc/mark-previous-like-this
-      "C-c C-<" 'mc/mark-all-like-this)
+      "C-c C-<" 'mc/markk-all-like-this)
+
+(require 'math-symbol-lists)
+(quail-define-package "math" "UTF-8" "Ω" t)
+(quail-define-rules ; whatever extra rules you want to define...
+ ("\\from"    #X2190)
+ ("\\to"      #X2192)
+ ("\\lhd"     #X22B2)
+ ("\\rhd"     #X22B3)
+ ("\\unlhd"   #X22B4)
+ ("\\unrhd"   #X22B5))
+(mapc (lambda (x)
+        (if (cddr x)
+            (quail-defrule (cadr x) (car (cddr x)))))
+      (append math-symbol-list-basic math-symbol-list-extended))
+
+(defun activate-math-symbol ()
+  (interactive)
+  (activate-input-method "math"))
+(add-hook! company-coq-mode 'activate-math-symbol)
