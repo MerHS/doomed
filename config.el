@@ -77,7 +77,7 @@
 (map! "C-c m" 'mc/edit-lines
       "C->" 'mc/mark-next-like-this
       "C-<" 'mc/mark-previous-like-this
-      "C-c C-<" 'mc/markk-all-like-this)
+      "C-c C-<" 'mc/mark-all-like-this)
 
 (require 'math-symbol-lists)
 (quail-define-package "math" "UTF-8" "Ω" t)
