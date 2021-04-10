@@ -49,3 +49,4 @@
 ;(unpin! t)
 ; (package! fira-code-mode)
 (package! math-symbol-lists)
+(package! tide)
