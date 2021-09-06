@@ -54,7 +54,8 @@
 ;; they are implemented.
 (setq doom-font (font-spec :family "Fira Code" :size 11))
 (global-set-key (kbd "M-m") nil)
-(setq doom-leader-alt-key "M-m")
+(setq doom-localleader-key "M-m")
+;; (setq doom-leader-alt-key "M-m")
 
 (setq default-frame-alist '((left . 10) (top . 35) (width . 141) (height . 65)))
 (setq c-basic-offset 2)
@@ -123,3 +124,5 @@
                   (set-face-attribute 'company-coq-comment-h1-face nil :height 1.2)
                   (set-face-attribute 'company-coq-comment-h2-face nil :height 1.1)
                   (set-face-attribute 'company-coq-comment-h3-face nil :height 1.0)))
+(after! rustic
+  (setq rustic-lsp-server 'rls))
