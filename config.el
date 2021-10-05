@@ -132,3 +132,7 @@
 
 (setq lsp-haskell-formatting-provider "stylish-haskell")
 (setq haskell-stylish-on-save t)
+
+(load! "llvm/llvm-mode.el")
+(load! "llvm/mlir-mode.el")
+(load! "llvm/tablegen-mode.el")
