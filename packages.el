@@ -50,3 +50,6 @@
 ; (package! fira-code-mode)
 (package! math-symbol-lists)
 (package! tide)
+(package! clang-format)
+(package! haskell-mode)
+(package! lsp-haskell)

@@ -52,9 +52,12 @@
 ;;
 ;; You can also try 'gd' (or 'M-m c d') to jump to their definition and see how
 ;; they are implemented.
-(setq doom-font (font-spec :family "Fira Code" :size 11))
+(setq doom-font (font-spec :family "Fira Code" :size 12))
 (global-set-key (kbd "M-m") nil)
-(setq doom-localleader-key "M-m")
+(setq doom-leader-key "M-n")
+(setq doom-leader-alt-key "M-m")
+;; (setq doom-localleader-key "M-n")
+;; (setq doom-localleader-alt-key "M-m")
 ;; (setq doom-leader-alt-key "M-m")
 
 (setq default-frame-alist '((left . 10) (top . 35) (width . 141) (height . 65)))
@@ -126,3 +129,6 @@
                   (set-face-attribute 'company-coq-comment-h3-face nil :height 1.0)))
 (after! rustic
   (setq rustic-lsp-server 'rls))
+
+(setq lsp-haskell-formatting-provider "stylish-haskell")
+(setq haskell-stylish-on-save t)
