@@ -52,7 +52,7 @@
 ;;
 ;; You can also try 'gd' (or 'M-m c d') to jump to their definition and see how
 ;; they are implemented.
-(setq doom-font (font-spec :family "Berkeley Mono" :size 10))
+(setq doom-font (font-spec :family "Fira Code" :size 10))
 (global-set-key (kbd "M-m") nil)
 (setq doom-leader-key "M-n")
 (setq doom-leader-alt-key "M-m")
